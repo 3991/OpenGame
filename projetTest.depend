@@ -832,3 +832,30 @@
 1486838510 c:\program files (x86)\tgui-0.7\include\tgui\widgets\tooltip.hpp
 	<TGUI/Widgets/Label.hpp>
 
+1492460003 source:c:\program files (x86)\codeblocks16\projets\opengame\cscreen.cpp
+	<iostream>
+	<SFML/Graphics.hpp>
+
+1492460851 source:c:\program files (x86)\codeblocks16\projets\opengame\main.cpp
+	<iostream>
+	<TGUI/TGUI.hpp>
+	"screens.hpp"
+
+1492460571 c:\program files (x86)\codeblocks16\projets\opengame\screens.hpp
+	"cScreen.hpp"
+	"screen_0.hpp"
+	"screen_1.hpp"
+
+1492460853 c:\program files (x86)\codeblocks16\projets\opengame\cscreen.hpp
+	<SFML/Graphics.hpp>
+
+1492461378 c:\program files (x86)\codeblocks16\projets\opengame\screen_0.hpp
+	<iostream>
+	"cScreen.hpp"
+	<SFML/Graphics.hpp>
+
+1492460655 c:\program files (x86)\codeblocks16\projets\opengame\screen_1.hpp
+	<iostream>
+	"cScreen.hpp"
+	<SFML/Graphics.hpp>
+

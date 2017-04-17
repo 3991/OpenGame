@@ -1,4 +1,6 @@
+#include <iostream>
 #include <TGUI/TGUI.hpp>
+#include "screens.hpp"
 
 namespace patch
 {
@@ -10,15 +12,23 @@ namespace patch
     }
 }
 
-int main()
-{
+int main(int argc, char** argv){
+    //Applications variables
+	std::vector<cScreen*> Screens;
+	int screen = 0;
+
     sf::RenderWindow window(sf::VideoMode(800, 600), "TGUI window");
     window.setFramerateLimit(60);
 
     tgui::Gui gui(window);
 
-    try
-    {
+    //Screens preparations
+	screen_0 s0;
+	Screens.push_back(&s0);
+	screen_1 s1;
+	Screens.push_back(&s1);
+
+    try{
         //tgui::Theme::Ptr theme = tgui::Theme::create("./Black.txt");
 
         gui.add(tgui::Picture::create("./RedBackground.jpg"));
@@ -221,11 +231,14 @@ int main()
         return EXIT_FAILURE;
     }
 
-    while (window.isOpen())
-    {
+    //Main loop
+	while (screen >= 0){
+		screen = Screens[screen]->Run(window);
+	}
+
+    /*while (window.isOpen()) {
         sf::Event event;
-        while (window.pollEvent(event))
-        {
+        while (window.pollEvent(event)){
             if (event.type == sf::Event::Closed)
                 window.close();
 
@@ -235,7 +248,7 @@ int main()
         window.clear();
         gui.draw();
         window.display();
-    }
+    }*/
 
     return EXIT_SUCCESS;
 }
